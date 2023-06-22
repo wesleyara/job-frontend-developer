@@ -26,8 +26,8 @@ Além da listagem de vídeos, também gostaríamos de mostrar algumas informaç�
 
 Você pode gerar suas próprias API Keys para consumir as APIs, mas se quiser usar as nossas, seguem abaixo:
 
-* Youtube: `AIzaSyDd_sfvQ4NASb-k0oKYAr_g9FZcQILtyKc`
-* TicketMaster: `q2GNlCrgGo6c8uej3Ib4MsbAC2KIr5nG`
+* Youtube: `AIzaSyCKkUjL9N-LNCWlFiWxSgV2W7oZqf33Nlc`
+* TicketMaster: `x9TAS10ua31T7nONj8geuWe7Cnp7OixA`
 
 ### O que nós esperamos do seu teste
 
