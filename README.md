@@ -35,12 +35,12 @@ Você pode gerar suas próprias API Keys para consumir as APIs, mas se quiser us
 * Utilizar também o framework [NextJS](https://nextjs.org/)
 * Também ver a utilização de dependency managers (npm, webpack)
 * Mobile first e layout responsivo
-* Gerenciamento de estado
 
 ### O que nós ficaríamos felizes de ver em seu teste
 
 * Testes unitários
-* Alguma metodologia para definição e organização do seu código CSS
+* Gerenciamento de estado (Redux/Recoil/React Query/etc)
+* Utilizar algum framework de componenct (ex. Styled-components, Tailwind, Chakra, etc)
 
 ### O que nos impressionaria
 
