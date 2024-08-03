@@ -1,10 +1,5 @@
-import Image from "next/image";
+import { PageFrame } from "~/components/PageFrame";
 
-export default function Home() {
-  return (
-    <main>
-      <h1>Welcome to the Search Band App</h1>
-      <Image src="/next.svg" alt="Next.js logo" width={200} height={200} />
-    </main>
-  );
+export default async function Home() {
+  return <PageFrame />;
 }
