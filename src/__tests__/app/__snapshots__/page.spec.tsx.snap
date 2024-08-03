@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Page unit tests > should render correctly 1`] = `
+<div>
+  <main
+    class="h-[100vh] flex flex-col items-center justify-center bg-[#ebebeb]"
+  />
+</div>
+`;

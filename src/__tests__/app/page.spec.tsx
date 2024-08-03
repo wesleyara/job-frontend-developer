@@ -1,13 +1,12 @@
 import { render } from "@testing-library/react";
+import Page from "~/app/page";
 import { beforeEach, describe, expect, it } from "vitest";
 
-import Page from "../app/page";
-
-describe("Page unit tests", () => {
+describe("Page unit tests", async () => {
   let sut: JSX.Element;
 
-  beforeEach(() => {
-    sut = <Page />;
+  beforeEach(async () => {
+    sut = await Page();
   });
 
   it("should mounted the page", () => {
