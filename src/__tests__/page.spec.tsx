@@ -1,3 +1,4 @@
+import { render } from "@testing-library/react";
 import { beforeEach, describe, expect, it } from "vitest";
 
 import Page from "../app/page";
@@ -11,5 +12,11 @@ describe("Page unit tests", () => {
 
   it("should mounted the page", () => {
     expect(sut).toBeDefined();
+  });
+
+  it("should render correctly", () => {
+    const { container } = render(sut);
+
+    expect(container).toMatchSnapshot();
   });
 });
