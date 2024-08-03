@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test:run": "vitest --run"
+    "test:run": "vitest -u --run"
   },
   "dependencies": {
     "next": "14.2.5",
