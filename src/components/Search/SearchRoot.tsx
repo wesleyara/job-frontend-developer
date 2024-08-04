@@ -1,3 +1,4 @@
+import { useData } from "~/context/DataContext";
 import { ReactNode } from "react";
 
 interface SearchRootProps {
@@ -5,7 +6,14 @@ interface SearchRootProps {
 }
 
 export const SearchRoot = ({ children }: SearchRootProps) => {
+  const { handleSearch } = useData();
+
   return (
-    <div className="flex items-center justify-center gap-1">{children}</div>
+    <form
+      onSubmit={handleSearch}
+      className="flex items-center justify-center gap-1"
+    >
+      {children}
+    </form>
   );
 };
