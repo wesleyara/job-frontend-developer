@@ -48,8 +48,6 @@ export const DataProvider = ({ children }: DataProviderProps) => {
           title: "Sucesso, dados carregados!",
         });
 
-        setEnabled(false);
-
         return data._embedded.attractions;
       },
       enabled,
