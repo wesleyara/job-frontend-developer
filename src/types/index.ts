@@ -21,14 +21,8 @@ export interface Classification {
   family: boolean;
 }
 
-export enum Ratio {
-  The16_9 = "16_9",
-  The3_2 = "3_2",
-  The4_3 = "4_3",
-}
-
 export interface Image {
-  ratio: Ratio;
+  ratio: string;
   url: string;
   width: number;
   height: number;

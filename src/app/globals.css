@@ -67,3 +67,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+body {
+  background-color: #ebebeb ;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-b-md text-white bg-primary;
+}
