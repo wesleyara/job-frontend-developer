@@ -3,6 +3,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useToast } from "~/components/ui/use-toast";
 import { HttpClient } from "~/lib/httpClient";
+import { SearchAttraction } from "~/types";
 import {
   ChangeEvent,
   createContext,
@@ -13,7 +14,7 @@ import {
 
 interface DataContextType {
   searchQuery: string;
-  ticketSearchData: any;
+  ticketSearchData: SearchAttraction[];
   ticketSearchIsLoading: boolean;
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
   handleSearch: () => void;
