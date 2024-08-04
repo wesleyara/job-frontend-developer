@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SearchRoot unit test > should render correctly 1`] = `
+<div>
+  <div
+    class="flex items-center justify-center gap-1"
+  >
+    <span />
+  </div>
+</div>
+`;
