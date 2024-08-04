@@ -1,0 +1,36 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SelectAttraction unit test > should render correctly 1`] = `
+<div>
+  <div
+    class="flex rounded-t-md"
+  >
+    <img
+      alt="Jota Quest"
+      class="w-20 h-20 object-cover rounded-t-md"
+      data-nimg="1"
+      decoding="async"
+      height="80"
+      loading="lazy"
+      src="/_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fc%2F548%2F5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_TABLET_LANDSCAPE_3_2.jpg&w=256&q=75"
+      srcset="/_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fc%2F548%2F5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_TABLET_LANDSCAPE_3_2.jpg&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fc%2F548%2F5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_TABLET_LANDSCAPE_3_2.jpg&w=256&q=75 2x"
+      style="color: transparent;"
+      width="80"
+    />
+    <div
+      class="p-4"
+    >
+      <h3
+        class="text-md md:text-lg font-semibold"
+      >
+        Jota Quest
+      </h3>
+      <p
+        class="text-sm text-gray-500"
+      >
+        World
+      </p>
+    </div>
+  </div>
+</div>
+`;

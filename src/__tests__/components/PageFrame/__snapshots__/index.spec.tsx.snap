@@ -3,7 +3,7 @@
 exports[`PageFrame > should render correctly 1`] = `
 <div>
   <main
-    class="h-[100vh] flex flex-col items-center justify-center bg-[#ebebeb]"
+    class="flex flex-col items-center my-24"
   >
     <div
       class="flex items-center justify-center gap-1"
@@ -12,6 +12,7 @@ exports[`PageFrame > should render correctly 1`] = `
         class="py-2 px-3 rounded-md outline-none"
         placeholder="Busque o artista"
         type="text"
+        value=""
       />
       <button
         class="p-3 bg-blue-500 text-white rounded-md"
