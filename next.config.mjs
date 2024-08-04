@@ -6,6 +6,9 @@ const nextConfig = {
     YOUTUBE_KEY: process.env.YOUTUBE_KEY,
     TICKET_KEY: process.env.TICKET_KEY,
   },
+  images: {
+    domains: ["s1.ticketm.net"],
+  },
 };
 
 export default nextConfig;
