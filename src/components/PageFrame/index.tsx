@@ -8,14 +8,20 @@ import { ErrorFrame } from "../ErrorFrame";
 import { Search } from "../Search";
 import { SelectAttraction } from "../SelectAttraction";
 import { ShowAttraction } from "../ShowAttraction";
+import { ViewYoutube } from "../ViewYoutube";
 
 export const PageFrame = () => {
   const {
     searchQuery,
-    ticketSearchData,
+    dataTicketSearch,
+    dataYoutubeVideosDetails,
     selectedAttraction,
-    ticketSearchIsLoading,
-    ticketSearchError,
+    isLoadingTicketSearch,
+    isLoadingYoutubeVideos,
+    isLoadingYoutubeVideosDetails,
+    errorTicketSearch,
+    errorYoutubeVideos,
+    errorYoutubeVideosDetails,
     handleChange,
     handleSelectAttraction,
   } = useData();
@@ -23,15 +29,15 @@ export const PageFrame = () => {
   const [ratioSelected, setRatioSelected] = useState<string>("");
   const [seeMore, setSeeMore] = useState<boolean>(false);
 
-  const enableToRender = ticketSearchData && ticketSearchData.length > 0;
+  const enableToRender = dataTicketSearch && dataTicketSearch.length > 0;
 
   const render = () => {
-    if (ticketSearchIsLoading) {
+    if (isLoadingTicketSearch) {
       return <p className="mt-10">Carregando...</p>;
     }
 
-    if (ticketSearchError) {
-      return <ErrorFrame error={ticketSearchError} />;
+    if (errorTicketSearch || errorYoutubeVideos || errorYoutubeVideosDetails) {
+      return <ErrorFrame error={errorTicketSearch} />;
     }
 
     if (selectedAttraction) {
@@ -51,37 +57,51 @@ export const PageFrame = () => {
         }
       });
 
-      console.log(imagesPerRatio);
-
       const selected = imagesPerRatio.find(
         (item: any) => item.ratio === ratioSelected,
       );
 
       return (
-        <ShowAttraction.Root onClick={() => setSeeMore(prev => !prev)}>
-          {!seeMore ? (
-            <>
-              <ShowAttraction.Info selectedAttraction={selectedAttraction} />
-              <ShowAttraction.Badges
-                classifications={selectedAttraction.classifications}
+        <>
+          <ShowAttraction.Root onClick={() => setSeeMore(prev => !prev)}>
+            {!seeMore ? (
+              <>
+                <ShowAttraction.Info selectedAttraction={selectedAttraction} />
+                <ShowAttraction.Badges
+                  classifications={selectedAttraction.classifications}
+                />
+              </>
+            ) : (
+              <ShowAttraction.Carousel
+                setRatioSelected={setRatioSelected}
+                selected={selected}
+                imagesPerRatio={imagesPerRatio}
+                ratioSelected={ratioSelected}
               />
-            </>
-          ) : (
-            <ShowAttraction.Carousel
-              setRatioSelected={setRatioSelected}
-              selected={selected}
-              imagesPerRatio={imagesPerRatio}
-              ratioSelected={ratioSelected}
-            />
-          )}
-        </ShowAttraction.Root>
+            )}
+          </ShowAttraction.Root>
+
+          <span className="flex mt-5">
+            {isLoadingYoutubeVideos || isLoadingYoutubeVideosDetails ? (
+              <p>Carregando...</p>
+            ) : (
+              !!dataYoutubeVideosDetails && (
+                <ViewYoutube.Root>
+                  {dataYoutubeVideosDetails?.map(item => (
+                    <ViewYoutube.Card key={item.id} item={item} />
+                  ))}
+                </ViewYoutube.Root>
+              )
+            )}
+          </span>
+        </>
       );
     }
 
     if (enableToRender) {
       return (
         <div className="flex flex-col gap-3 mt-5 overflow-auto md:w-[600px] w-[90%]">
-          {ticketSearchData.map(item => (
+          {dataTicketSearch.map(item => (
             <SelectAttraction.Root key={item.id}>
               <SelectAttraction.Content item={item} />
               <SelectAttraction.Button

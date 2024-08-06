@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ViewYoutubeRoot unit test > should render correctly 1`] = `
+<div>
+  <section
+    class="flex flex-col gap-3 w-[90%] mx-auto max-w-[400px] items-center"
+  >
+    <span />
+  </section>
+</div>
+`;

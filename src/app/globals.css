@@ -75,3 +75,17 @@ body {
 .btn {
   @apply px-4 py-2 rounded-b-md text-white bg-primary;
 }
+
+.play-tooltip {
+  cursor: pointer;
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+}
+
+.play-tooltip.show {
+  visibility: visible;
+}
