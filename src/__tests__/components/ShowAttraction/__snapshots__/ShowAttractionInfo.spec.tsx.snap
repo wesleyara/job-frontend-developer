@@ -3,10 +3,10 @@
 exports[`SelectAttraction unit test > should render correctly 1`] = `
 <div>
   <span
-    class="flex items-center gap-4"
+    class="flex items-center gap-4 flex-wrap justify-center"
   >
     <span
-      class="w-32 h-32 rounded-full relative"
+      class="w-24 h-24 sm:w-32 sm:h-32 rounded-full relative"
     >
       <img
         alt="Jota Quest"

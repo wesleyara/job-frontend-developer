@@ -1,6 +1,7 @@
 "use client";
 
 import { useData } from "~/context/DataContext";
+import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
 import { ErrorFrame } from "../ErrorFrame";
@@ -19,6 +20,9 @@ export const PageFrame = () => {
     handleSelectAttraction,
   } = useData();
 
+  const [ratioSelected, setRatioSelected] = useState<string>("");
+  const [seeMore, setSeeMore] = useState<boolean>(false);
+
   const enableToRender = ticketSearchData && ticketSearchData.length > 0;
 
   const render = () => {
@@ -31,12 +35,45 @@ export const PageFrame = () => {
     }
 
     if (selectedAttraction) {
+      const imagesPerRatio: any = [];
+
+      selectedAttraction.images.forEach(image => {
+        const ratio = image.ratio;
+        const find = imagesPerRatio.find((item: any) => item.ratio === ratio);
+
+        if (find) {
+          find.images.push(image);
+        } else {
+          imagesPerRatio.push({
+            ratio,
+            images: [image],
+          });
+        }
+      });
+
+      console.log(imagesPerRatio);
+
+      const selected = imagesPerRatio.find(
+        (item: any) => item.ratio === ratioSelected,
+      );
+
       return (
-        <ShowAttraction.Root>
-          <ShowAttraction.Info selectedAttraction={selectedAttraction} />
-          <ShowAttraction.Badges
-            classifications={selectedAttraction.classifications}
-          />
+        <ShowAttraction.Root onClick={() => setSeeMore(prev => !prev)}>
+          {!seeMore ? (
+            <>
+              <ShowAttraction.Info selectedAttraction={selectedAttraction} />
+              <ShowAttraction.Badges
+                classifications={selectedAttraction.classifications}
+              />
+            </>
+          ) : (
+            <ShowAttraction.Carousel
+              setRatioSelected={setRatioSelected}
+              selected={selected}
+              imagesPerRatio={imagesPerRatio}
+              ratioSelected={ratioSelected}
+            />
+          )}
         </ShowAttraction.Root>
       );
     }

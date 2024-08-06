@@ -10,8 +10,8 @@ export const ShowAttractionInfo = ({
   selectedAttraction,
 }: ShowAttractionInfoProps) => {
   return (
-    <span className="flex items-center gap-4">
-      <span className="w-32 h-32 rounded-full relative">
+    <span className="flex items-center gap-4 flex-wrap justify-center">
+      <span className="w-24 h-24 sm:w-32 sm:h-32 rounded-full relative">
         <Image
           className="rounded-full object-cover"
           fill

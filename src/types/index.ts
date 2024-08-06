@@ -22,7 +22,7 @@ export interface Classification {
   family: boolean;
 }
 
-export interface Image {
+export interface ImageType {
   ratio: string;
   url: string;
   width: number;
@@ -43,8 +43,13 @@ export interface SearchAttraction {
   url: string;
   locale: string;
   externalLinks?: any;
-  images: Image[];
+  images: ImageType[];
   classifications: Classification[];
   upcomingEvents: UpcomingEvents;
   _links: Links;
+}
+
+export interface ImagesPerRatioTypes {
+  ratio: string;
+  images: ImageType[];
 }
