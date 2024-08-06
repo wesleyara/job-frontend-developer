@@ -11,6 +11,7 @@ import { Search } from "../Search";
 import { SelectAttraction } from "../SelectAttraction";
 import { ShowAttraction } from "../ShowAttraction";
 import { ViewYoutube } from "../ViewYoutube";
+import { Loading } from "../Loading";
 
 export const PageFrame = () => {
   const {
@@ -37,7 +38,7 @@ export const PageFrame = () => {
 
   const render = () => {
     if (isLoadingTicketSearch) {
-      return <p className="mt-10">Carregando...</p>;
+      return <Loading />;
     }
 
     if (errorTicketSearch || errorYoutubeVideos || errorYoutubeVideosDetails) {
@@ -87,7 +88,7 @@ export const PageFrame = () => {
 
           <span className="flex mt-5">
             {isLoadingYoutubeVideos || isLoadingYoutubeVideosDetails ? (
-              <p>Carregando...</p>
+              <Loading />
             ) : (
               !!dataYoutubeVideosDetails && (
                 <ViewYoutube.Root>
