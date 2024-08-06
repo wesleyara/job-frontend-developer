@@ -42,7 +42,13 @@ export const PageFrame = () => {
     }
 
     if (errorTicketSearch || errorYoutubeVideos || errorYoutubeVideosDetails) {
-      return <ErrorFrame error={errorTicketSearch} />;
+      return (
+        <ErrorFrame
+          error={
+            errorTicketSearch || errorYoutubeVideos || errorYoutubeVideosDetails
+          }
+        />
+      );
     }
 
     if (selectedAttraction) {

@@ -90,6 +90,10 @@ export const DataProvider = ({ children }: DataProviderProps) => {
         `/search?part=snippet&maxResults=5&q=${selectedAttraction.name}&type=video`,
       );
 
+      if (data.error) {
+        throw new Error(data.error.message);
+      }
+
       if (!data?.items) {
         throw new Error(
           `Não existe nenhum dado para ser exibido para ${selectedAttraction.name}`,
@@ -119,6 +123,10 @@ export const DataProvider = ({ children }: DataProviderProps) => {
         "youtube",
         `/videos?id=${dataYoutubeVideos}&part=snippet,contentDetails,statistics,status`,
       );
+
+      if (data.error) {
+        throw new Error(data.error.message);
+      }
 
       if (!data?.items) {
         throw new Error(

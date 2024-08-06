@@ -42,7 +42,7 @@ export const ShowAttractionCarousel = ({
       <select
         onChange={e => setRatioSelected(e.target.value)}
         value={ratioSelected}
-        className="p-2 border border-gray-300 rounded-md bg-white"
+        className="p-2 border border-gray-300 rounded-md bg-white text-black"
       >
         <option value="">Selecione</option>
         {imagesPerRatio.map((item: any) => (
