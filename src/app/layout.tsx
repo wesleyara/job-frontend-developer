@@ -17,8 +17,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
+        <meta
+          name="description"
+          content="Search Band App, aqui você encontra sua banda favorita a qualquer momento."
+        />
+        <meta name="keywords" content="Search, Band, Video" />
+
+        <meta property="og:title" content="Search Band App" />
+        <meta
+          property="og:description"
+          content="Search Band App, aqui você encontra sua banda favorita a qualquer momento."
+        />
+        <meta property="og:image" content="/favicon.png" />
+        <meta property="og:url" content="https://search-band-app.vercel.app/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="icon" href="/favicon.png" />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link

@@ -134,7 +134,7 @@ export const PageFrame = () => {
     <main className="flex flex-col items-center my-24">
       <Search.Root>
         <Search.Input onChange={handleChange} value={searchQuery} />
-        <Search.Button icon={FaSearch} />
+        <Search.Button icon={FaSearch} aria-label="Search Button" />
       </Search.Root>
 
       {render()}
