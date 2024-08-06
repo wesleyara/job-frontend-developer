@@ -29,6 +29,7 @@
   ],
   "rules": {
     "import/prefer-default-export": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/ban-types": "off",
