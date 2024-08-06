@@ -7,7 +7,7 @@ const nextConfig = {
     TICKET_KEY: process.env.TICKET_KEY,
   },
   images: {
-    domains: ["s1.ticketm.net"],
+    domains: ["s1.ticketm.net", "i.ytimg.com"],
   },
 };
 
