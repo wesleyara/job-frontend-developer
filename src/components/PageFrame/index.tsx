@@ -1,10 +1,12 @@
 "use client";
 
 import { useData } from "~/context/DataContext";
+import { YoutubeDetailsType } from "~/types";
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
 import { ErrorFrame } from "../ErrorFrame";
+import { PlayVideoModal } from "../PlayVideoModal";
 import { Search } from "../Search";
 import { SelectAttraction } from "../SelectAttraction";
 import { ShowAttraction } from "../ShowAttraction";
@@ -28,6 +30,8 @@ export const PageFrame = () => {
 
   const [ratioSelected, setRatioSelected] = useState<string>("");
   const [seeMore, setSeeMore] = useState<boolean>(false);
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
+  const [videoSelected, setVideoSelected] = useState<YoutubeDetailsType>();
 
   const enableToRender = dataTicketSearch && dataTicketSearch.length > 0;
 
@@ -88,7 +92,12 @@ export const PageFrame = () => {
               !!dataYoutubeVideosDetails && (
                 <ViewYoutube.Root>
                   {dataYoutubeVideosDetails?.map(item => (
-                    <ViewYoutube.Card key={item.id} item={item} />
+                    <ViewYoutube.Card
+                      key={item.id}
+                      item={item}
+                      setModalOpen={setModalOpen}
+                      setVideoSelected={setVideoSelected}
+                    />
                   ))}
                 </ViewYoutube.Root>
               )
@@ -122,6 +131,14 @@ export const PageFrame = () => {
       </Search.Root>
 
       {render()}
+
+      {videoSelected && (
+        <PlayVideoModal
+          item={videoSelected}
+          isOpen={modalOpen}
+          setIsOpen={setModalOpen}
+        />
+      )}
     </main>
   );
 };

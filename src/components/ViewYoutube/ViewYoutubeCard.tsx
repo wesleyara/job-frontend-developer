@@ -2,16 +2,22 @@
 
 import { YoutubeDetailsType } from "~/types";
 import Image from "next/image";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { AiFillLike } from "react-icons/ai";
 import { FaPlay, FaRegComment } from "react-icons/fa";
 import { GrView } from "react-icons/gr";
 
 interface ViewYoutubeCardProps {
   item: YoutubeDetailsType;
+  setVideoSelected: Dispatch<SetStateAction<YoutubeDetailsType | undefined>>;
+  setModalOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-export const ViewYoutubeCard = ({ item }: ViewYoutubeCardProps) => {
+export const ViewYoutubeCard = ({
+  item,
+  setVideoSelected,
+  setModalOpen,
+}: ViewYoutubeCardProps) => {
   const [playHover, setPlayHover] = useState<boolean>(false);
   const [currentVideo, setCurrentVideo] = useState<string>("");
 
@@ -23,6 +29,11 @@ export const ViewYoutubeCard = ({ item }: ViewYoutubeCardProps) => {
   const handleMouseLeave = () => {
     setCurrentVideo("");
     setPlayHover(false);
+  };
+
+  const handleClick = (item: YoutubeDetailsType) => {
+    setVideoSelected(item);
+    setModalOpen(true);
   };
 
   const showPlay = (id: string) => {
@@ -56,6 +67,7 @@ export const ViewYoutubeCard = ({ item }: ViewYoutubeCardProps) => {
         className="relative cursor-pointer"
         onMouseEnter={() => handleMouseEnter(item.id)}
         onMouseLeave={() => handleMouseLeave()}
+        onClick={() => handleClick(item)}
       >
         <FaPlay
           className={`play-tooltip ${showPlay(item.id) ? "show" : ""}`}

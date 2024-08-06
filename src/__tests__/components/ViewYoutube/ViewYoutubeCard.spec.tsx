@@ -1,13 +1,22 @@
 import { render } from "@testing-library/react";
 import { youtubeVideosDetailsMock } from "~/__tests__/mocks";
 import { ViewYoutube } from "~/components/ViewYoutube";
-import { beforeEach, describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 
 describe("ShowAttractionInfo unit test", () => {
   let sut: JSX.Element;
 
+  const setVideoSelectedMock = vi.fn();
+  const setModalOpenMock = vi.fn();
+
   beforeEach(() => {
-    sut = <ViewYoutube.Card item={youtubeVideosDetailsMock} />;
+    sut = (
+      <ViewYoutube.Card
+        item={youtubeVideosDetailsMock}
+        setModalOpen={setModalOpenMock}
+        setVideoSelected={setVideoSelectedMock}
+      />
+    );
   });
 
   it("should be defined", () => {
