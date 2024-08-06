@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 import { ShowAttraction } from "~/components/ShowAttraction";
 import { beforeEach, describe, expect, it } from "vitest";
 
-describe("SearchRoot unit test", () => {
+describe("ShowAttractionRoot unit test", () => {
   let sut: JSX.Element;
 
   beforeEach(() => {

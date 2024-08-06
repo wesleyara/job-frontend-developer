@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`SearchButton unit test > should render correctly 1`] = `
+exports[`SelectAttractionButton unit test > should render correctly 1`] = `
 <div>
   <button
     class="btn"

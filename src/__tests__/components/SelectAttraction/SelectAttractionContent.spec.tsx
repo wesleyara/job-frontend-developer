@@ -3,7 +3,7 @@ import { attractionMock } from "~/__tests__/mocks";
 import { SelectAttraction } from "~/components/SelectAttraction";
 import { beforeEach, describe, expect, it } from "vitest";
 
-describe("SelectAttraction unit test", () => {
+describe("SelectAttractionContent unit test", () => {
   let sut: JSX.Element;
 
   beforeEach(() => {

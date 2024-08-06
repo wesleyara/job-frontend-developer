@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 import { SelectAttraction } from "~/components/SelectAttraction";
 import { beforeEach, describe, expect, it } from "vitest";
 
-describe("SelectAttraction unit test", () => {
+describe("SelectAttractionRoot unit test", () => {
   let sut: JSX.Element;
 
   beforeEach(() => {

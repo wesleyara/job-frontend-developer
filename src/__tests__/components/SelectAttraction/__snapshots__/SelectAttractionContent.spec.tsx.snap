@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`SelectAttraction unit test > should render correctly 1`] = `
+exports[`SelectAttractionContent unit test > should render correctly 1`] = `
 <div>
   <div
     class="flex rounded-t-md items-center"

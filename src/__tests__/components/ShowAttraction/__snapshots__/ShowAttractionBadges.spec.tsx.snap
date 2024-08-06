@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`SelectAttraction unit test > should render correctly 1`] = `
+exports[`ShowAttractionBadges unit test > should render correctly 1`] = `
 <div>
   <span
     class="flex gap-2 justify-center flex-wrap mt-5 px-2"

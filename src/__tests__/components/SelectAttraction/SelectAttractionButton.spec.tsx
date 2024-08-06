@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 import { SelectAttraction } from "~/components/SelectAttraction";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-describe("SearchButton unit test", () => {
+describe("SelectAttractionButton unit test", () => {
   const onClickMock = vi.fn();
   let sut: JSX.Element;
 
