@@ -23,10 +23,10 @@ describe("SearchRoot unit test", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("should have a div element", () => {
+  it("should have a form element", () => {
     const { container } = render(sut);
 
-    expect(container.querySelector("div")).not.toBeNull();
+    expect(container.querySelector("form")).not.toBeNull();
   });
 
   it("should have a child element", () => {

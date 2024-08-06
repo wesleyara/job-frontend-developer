@@ -2,10 +2,10 @@
 
 exports[`SearchRoot unit test > should render correctly 1`] = `
 <div>
-  <div
+  <form
     class="flex items-center justify-center gap-1"
   >
     <span />
-  </div>
+  </form>
 </div>
 `;
