@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export interface Self {
   href: string;
 }
@@ -41,6 +42,7 @@ export interface SearchAttraction {
   test: boolean;
   url: string;
   locale: string;
+  externalLinks?: any;
   images: Image[];
   classifications: Classification[];
   upcomingEvents: UpcomingEvents;

@@ -6,6 +6,7 @@ import { FaSearch } from "react-icons/fa";
 import { ErrorFrame } from "../ErrorFrame";
 import { Search } from "../Search";
 import { SelectAttraction } from "../SelectAttraction";
+import { ShowAttraction } from "../ShowAttraction";
 
 export const PageFrame = () => {
   const {
@@ -31,14 +32,12 @@ export const PageFrame = () => {
 
     if (selectedAttraction) {
       return (
-        <div className="flex flex-col items-center gap-5 mt-10">
-          <p>{selectedAttraction.name}</p>
-          <img
-            className="rounded-lg"
-            src={selectedAttraction.images[0].url}
-            alt={selectedAttraction.name}
+        <ShowAttraction.Root>
+          <ShowAttraction.Info selectedAttraction={selectedAttraction} />
+          <ShowAttraction.Badges
+            classifications={selectedAttraction.classifications}
           />
-        </div>
+        </ShowAttraction.Root>
       );
     }
 

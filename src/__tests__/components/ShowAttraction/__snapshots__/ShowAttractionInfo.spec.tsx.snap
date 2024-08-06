@@ -1,0 +1,32 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SelectAttraction unit test > should render correctly 1`] = `
+<div>
+  <span
+    class="flex items-center gap-4"
+  >
+    <span
+      class="w-32 h-32 rounded-full relative"
+    >
+      <img
+        alt="Jota Quest"
+        class="rounded-full object-cover"
+        data-nimg="fill"
+        decoding="async"
+        fetchpriority="high"
+        sizes="100%"
+        src="/_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fc%2F548%2F5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_TABLET_LANDSCAPE_3_2.jpg&w=3840&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fc%2F548%2F5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_TABLET_LANDSCAPE_3_2.jpg&w=16&q=75 16w, /_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fc%2F548%2F5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_TABLET_LANDSCAPE_3_2.jpg&w=32&q=75 32w, /_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fc%2F548%2F5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_TABLET_LANDSCAPE_3_2.jpg&w=48&q=75 48w, /_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fc%2F548%2F5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_TABLET_LANDSCAPE_3_2.jpg&w=64&q=75 64w, /_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fc%2F548%2F5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_TABLET_LANDSCAPE_3_2.jpg&w=96&q=75 96w, /_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fc%2F548%2F5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_TABLET_LANDSCAPE_3_2.jpg&w=128&q=75 128w, /_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fc%2F548%2F5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_TABLET_LANDSCAPE_3_2.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fc%2F548%2F5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_TABLET_LANDSCAPE_3_2.jpg&w=384&q=75 384w, /_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fc%2F548%2F5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_TABLET_LANDSCAPE_3_2.jpg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fc%2F548%2F5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_TABLET_LANDSCAPE_3_2.jpg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fc%2F548%2F5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_TABLET_LANDSCAPE_3_2.jpg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fc%2F548%2F5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_TABLET_LANDSCAPE_3_2.jpg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fc%2F548%2F5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_TABLET_LANDSCAPE_3_2.jpg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fc%2F548%2F5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_TABLET_LANDSCAPE_3_2.jpg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fc%2F548%2F5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_TABLET_LANDSCAPE_3_2.jpg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fc%2F548%2F5fefbd1c-973b-4b0e-9b2e-d78e4ce37548_106111_TABLET_LANDSCAPE_3_2.jpg&w=3840&q=75 3840w"
+        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+      />
+    </span>
+    <span
+      class="flex flex-col gap-2"
+    >
+      <h5>
+        Jota Quest
+      </h5>
+    </span>
+  </span>
+</div>
+`;

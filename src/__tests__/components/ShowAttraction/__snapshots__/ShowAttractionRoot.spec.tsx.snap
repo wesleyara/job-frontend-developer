@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SearchRoot unit test > should render correctly 1`] = `
+<div>
+  <section
+    class="flex flex-col items-center gap-5 mt-10 border-2 border-gray-300 rounded-lg bg-white py-10 w-[90%] max-w-[600px]"
+  >
+    <span />
+  </section>
+</div>
+`;
