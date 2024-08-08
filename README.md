@@ -1,64 +1,114 @@
-# Dolado: Teste prático para Frontend
+<h1 style="text-align: center;">Search Band App</h1>
 
-Este é o teste usado por nós aqui da [Dolado](http://www.dolado.com.br) para avaliar tecnicamente os candidatos a nossas vagas de Frontend. Se você estiver participando de um processo seletivo para nossa equipe, certamente em algum momento receberá este link, mas caso você tenha chego aqui "por acaso", sinta-se convidado a desenvolver nosso teste e enviar uma mensagem para nós no e-mail `tech@dolado.com.br`. 
+<div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+  <img target="_blank" align="center" alt="icon-TS" src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white">
+  <img target="_blank" align="center" alt="icon-NEXT" src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white">
+  <img target="_blank" align="center" alt="icon-TAILWIND" src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"> 
+  <img target="_blank" align="center" alt="icon-REACT-QUERY" src="https://img.shields.io/badge/React_Query-FF4154?style=for-the-badge&logo=ReactQuery&logoColor=white"> 
+  <img target="_blank" align="center" alt="icon-SHADCN" src="https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcnui&logoColor=white"> 
+  <img target="_blank" align="center" alt="icon-VITEST" src="https://img.shields.io/badge/vitest-000000?style=for-the-badge&logo=vitest"> 
+  <img target="_blank" align="center" alt="icon-CYPRESS" src="https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white"> 
+  <img target="_blank" align="center" alt="icon-ESLINT" src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white">
+  <img target="_blank" align="center" alt="icon-PRETTIER" src="https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E">
+</div>
 
-Aqui na Dolado nós aplicamos este mesmo teste para as vagas em todos os níveis, ou seja, um candidato a uma vaga de frontend júnior fará o mesmo teste de um outro candidato a uma vaga de frontend sênior, mudando obviamente o nosso critério de avaliação do resultado do teste. 
+## 📖 Descrição
 
-Nós fazemos isso esperando que as pessoas mais iniciantes entendam qual o modelo de profissional que temos por aqui e que buscamos para o nosso time. Portanto, se você estiver se candidatando a uma vaga mais iniciante, não se assuste, e faça o melhor que você puder!
+O Search Band App é uma aplicação que permite pesquisar por bandas e visualizar informações sobre elas. Basta utilizar o campo de pesquisa e buscar pela sua banda favorita!
 
-## Instruções
+[Preview](https://search-band-app.vercel.app/)
 
-Você deverá criar um `fork` deste projeto, e desenvolver em cima do seu fork. Use o *README* principal do seu repositório para nos contar como foi resolver seu teste, as decisões tomadas, como você organizou e separou seu código, e principalmente as instruções de como rodar seu projeto, afinal a primeira pessoa que irá rodar seu projeto será um programador backend de nossa equipe, e se você conseguir explicar para ele como fazer isso, você já começou bem!
+## 📦 Instalação
 
-Lembre-se que este é um teste técnico e não um concurso público, portanto, não existe apenas uma resposta correta. Mostre que você é bom e nos impressione, mas não esqueça do objetivo do projeto. 
+```bash
+# clone o repositório
+git clone https://github.com/wesleyara/job-frontend-developer
 
-Nós não definimos um tempo limite para resolução deste teste, o que vale para nós e o resultado final e a evolução da criação do projeto até se atingir este resultado, mas acreditamos que este desafio pode ser resolvido em cerca de 16 horas de codificação.
+# acesse a pasta do projeto
+cd job-frontend-developer
 
-## O desafio
+# instale as dependências
+npm install
+# ou
+yarn
+```
 
-Você irá construir a nossa próxima aplicação de busca de bandas e artistas usando as [APIs do Youtube](https://developers.google.com/youtube/v3/getting-started) e [TicketMaster](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/). É uma aplicação simples, onde iremos buscar por um determinado artista ou banda para termos acesso aos vídeos do Youtube retornados pela busca e também os dados desta banda requisitados através da API do Ticketmaster.
+## 🔨 Execução
 
-Nossa ideia de interface, é uma tela com apenas um campo de busca no centro da tela, que ao ser acionado com o nome da banda, irá submeter esta pesquisa para a API do Youtube, retornando uma listagem com alguns vídeos desta banda. Com o submit do formulário, o campo deve se posicionar no topo da tela, para que o espaço todo do miolo da página seja melhor aproveitado.
+```bash
+# execute a aplicação
+npm run dev
+# ou
+yarn dev
+```
 
-Para cada um dos vídeos, gostaríamos de ver pelo menos os dados básicos, como titulo, descrição e thumbnail (obviamentem quanto mais informações você mostrar melhor, como rating, usuário que enviou, etc). Quando clicarmos no vídeo, queremos reproduzir o vídeo (embedado ali, em um modal, ou até em um simples link, faça como quiser).
+Para executar utilizando o Docker, basta executar o comando:
 
-Além da listagem de vídeos, também gostaríamos de mostrar algumas informações sobre a banda, como os dados de contato em redes sociais, imagens, e o que mais você conseguir extarir da API do TicketMaster. Uma dica é utilizar o recurso de `Attraction Search` da `Discovery API` do TicketMaster para retornar estas informações.
+```bash
+# construa a imagem
+docker build -t search-band-app .
 
-Você pode gerar suas próprias API Keys para consumir as APIs, mas se quiser usar as nossas, seguem abaixo:
+# execute o container
+docker run -p 3000:3000 search-band-app
+```
 
-* Youtube: `AIzaSyCKkUjL9N-LNCWlFiWxSgV2W7oZqf33Nlc`
-* TicketMaster: `x9TAS10ua31T7nONj8geuWe7Cnp7OixA`
+Em seguida, abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver a aplicação.
 
-### O que nós esperamos do seu teste
+## 🚀 Tecnologias
 
-* Ver na solução a utilização do framework [React](https://react.dev/)
-* Utilizar também o framework [NextJS](https://nextjs.org/)
-* Também ver a utilização de dependency managers (npm, webpack)
-* Mobile first e layout responsivo
+- _TypeScript_ - Linguagem de programação
+- _Next.js_ - Framework de desenvolvimento web
+- _Tailwind CSS_ - Framework de estilos
+- _React Query_ - Biblioteca de gerenciamento de estado
+- _shadcn/ui_ - Componentes de interface
+- _Vitest_ - Testes unitários
+- _Cypress_ - Testes end-to-end
+- _Eslint_ - Linter de código
+- _Prettier_ - Formatador de código
+- _Docker_ - Containerização da aplicação
+- _CI/CD_ - Integração contínua e entrega contínua
 
-### O que nós ficaríamos felizes de ver em seu teste
+Além disso, o projeto conta com a utilização de serviços externos, como:
 
-* Testes unitários
-* Gerenciamento de estado (Redux/Recoil/React Query/etc)
-* Utilizar algum framework de componenct (ex. Styled-components, Tailwind, Chakra, etc)
+- [_Ticket Master_](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/) - Para buscar informações relacionados à banda pesquisada.
+- [_Youtube API_](https://developers.google.com/youtube/v3/getting-started) - Para buscar vídeos relacionados à banda pesquisada.
 
-### O que nos impressionaria
+## 📝 Testes
 
-* Testes de aceitação
-* [BEM naming convention](http://getbem.com/naming/)
-* Ver o código rodando live (Bucket estático S3, Heroku, Firebase Hosting, etc)
+Para executar os testes unitários, basta executar o comando:
 
-### O que nós não gostaríamos
+```bash
+npm run test:run
+# ou
+yarn test:run
+```
 
-* Descobrir que não foi você quem fez seu teste
-* Ver commits grandes, sem muita explicação nas mensagens em seu repositório 
-* Encontrar um um commit com as dependências de NPM
+## ✅ Explicando o processo de desenvolvimento
 
-## O que avaliaremos de seu teste
+O app conta como uma única página, onde o usuário pode pesquisar por uma banda e visualizar informações sobre ela. 
 
-* Histórico de commits do git
-* As instruções de como rodar o projeto
-* Organização, semântica, estrutura, legibilidade, manutenibilidade do seu código
-* Alcance dos objetivos propostos
-* Adaptação mobile (layout responsivo)
-* Componentização e extensibilidade dos componentes Javascript
+Comecei o desenvolvimento do projeto estruturando o ambiente de desenvolvimento, criando a aplicação em _Next.js_ e configurando o _eslint_, _prettier_, _vitest_ e _tailwind_.
+
+Utilizei de um padrão de pastas muito presente no mercado, onde separei a aplicação em _components_, _contexts_, _lib_ e _types_.
+
+Durante o desenvolvimento optei por utilizar um design pattern chamado de _Composition_, que permite maior flexibilidade, facilidade nos testes unitários e reutilização de código, já que fazemos muito uso de componentes.
+
+Para a busca de informações utilizando o protocolo HTTP, resolvi criar uma interface e uma classe (_HttpClient_) que implementa essa interface, para que possamos trocar de serviço de busca de informações sem alterar o código da aplicação. Utilizando do princípio de _Dependency Inversion_.
+
+Para a busca de informações, utilizei a API do _Ticket Master_ e _Youtube API_, onde a primeira é utilizada para buscar informações sobre a banda pesquisada e a segunda para buscar vídeos relacionados à banda.
+
+O _React Query_ foi utilizado para gerenciar o estado da aplicação, onde é possível fazer cache das informações e atualizá-las de forma automática. Além disso, fiz o uso de um contexto global para armazenar alguns estados da aplicação.
+
+Para os testes unitários, utilizei o _Vitest_, onde é possível testar componentes, hooks e funções de forma isolada.
+
+Para os testes end-to-end, utilizei o _Cypress_, onde é possível testar a aplicação de forma mais realista, simulando ações do usuário.
+
+Por fim, configurei _CI/CD_ para o Github Actions, utilizei o _Docker_ para containerizar a aplicação e o _Vercel_ para fazer o deploy da aplicação.
+
+## 🧑 Autor
+
+<table>
+  <tr>
+    <td align="center"><a href="https://wesleyaraujo.dev/"><img src="https://avatars.githubusercontent.com/u/89321125?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Wesley Araújo</b></sub></a><br /></td>
+  </tr>
+</table>
