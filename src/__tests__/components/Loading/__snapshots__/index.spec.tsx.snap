@@ -1,0 +1,46 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Loading unit test > should render correctly 1`] = `
+<div>
+  <div
+    class="spinner center"
+  >
+    <div
+      class="spinner-blade"
+    />
+    <div
+      class="spinner-blade"
+    />
+    <div
+      class="spinner-blade"
+    />
+    <div
+      class="spinner-blade"
+    />
+    <div
+      class="spinner-blade"
+    />
+    <div
+      class="spinner-blade"
+    />
+    <div
+      class="spinner-blade"
+    />
+    <div
+      class="spinner-blade"
+    />
+    <div
+      class="spinner-blade"
+    />
+    <div
+      class="spinner-blade"
+    />
+    <div
+      class="spinner-blade"
+    />
+    <div
+      class="spinner-blade"
+    />
+  </div>
+</div>
+`;

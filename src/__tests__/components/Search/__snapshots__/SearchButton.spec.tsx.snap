@@ -4,6 +4,7 @@ exports[`SearchButton unit test > should render correctly 1`] = `
 <div>
   <button
     class="p-3 bg-blue-500 text-white rounded-md"
+    data-cy="search-button"
   >
     <svg
       fill="currentColor"

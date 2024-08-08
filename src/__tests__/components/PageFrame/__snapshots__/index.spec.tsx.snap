@@ -10,12 +10,15 @@ exports[`PageFrame > should render correctly 1`] = `
     >
       <input
         class="py-2 px-3 rounded-md outline-none"
+        data-cy="search-input"
         placeholder="Busque o artista"
         type="text"
         value=""
       />
       <button
+        aria-label="Search Button"
         class="p-3 bg-blue-500 text-white rounded-md"
+        data-cy="search-button"
       >
         <svg
           fill="currentColor"

@@ -4,6 +4,7 @@ exports[`ShowAttractionBadges unit test > should render correctly 1`] = `
 <div>
   <span
     class="flex gap-2 justify-center flex-wrap mt-5 px-2"
+    data-cy="show-attraction-badges"
   >
     <div
       class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground"

@@ -4,6 +4,7 @@ exports[`SelectAttractionContent unit test > should render correctly 1`] = `
 <div>
   <div
     class="flex rounded-t-md items-center"
+    data-cy="select-attraction-content"
   >
     <img
       alt="Jota Quest"

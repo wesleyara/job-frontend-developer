@@ -4,9 +4,11 @@ exports[`ShowAttractionInfo unit test > should render correctly 1`] = `
 <div>
   <article
     class="flex flex-col gap-3 p-3 rounded-md border border-gray-300 bg-white w-full items-center"
+    data-cy="view-youtube-card"
   >
     <span
       class="relative cursor-pointer"
+      data-cy="view-youtube-thumb-undefined"
     >
       <svg
         class="play-tooltip "

@@ -4,6 +4,7 @@ exports[`SearchInput unit test > should render correctly 1`] = `
 <div>
   <input
     class="py-2 px-3 rounded-md outline-none"
+    data-cy="search-input"
     placeholder="Busque o artista"
     type="text"
   />

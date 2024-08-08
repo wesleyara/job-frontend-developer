@@ -4,6 +4,7 @@ exports[`SelectAttractionButton unit test > should render correctly 1`] = `
 <div>
   <button
     class="btn"
+    data-cy="select-attraction-button"
   >
     Selecionar
   </button>
