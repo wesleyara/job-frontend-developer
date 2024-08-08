@@ -28,6 +28,12 @@ describe("template spec", () => {
     cy.get("[data-cy=select-attraction-button]").should("exist");
   });
 
+  it("should render error message", () => {
+    searchAttraction("error-mock");
+
+    cy.get("[data-cy=error-frame]").should("exist");
+  });
+
   it("should select attraction button works", () => {
     searchAttraction("Jota Quest");
     selectAttraction();
