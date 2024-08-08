@@ -22,6 +22,7 @@ export const PlayVideoModal = ({
       <div className="fixed inset-0 flex mx-auto items-center justify-center p-4">
         <DialogPanel className="space-y-4 border border-gray-300 bg-white p-12 max-w-[768px] w-[90%] text-center rounded-md relative">
           <button
+            data-cy="close-youtube-modal"
             className="absolute top-2 right-3"
             onClick={() => setIsOpen(false)}
           >
@@ -30,6 +31,7 @@ export const PlayVideoModal = ({
           <DialogTitle className="text-lg">{item.snippet.title}</DialogTitle>
 
           <iframe
+            data-cy="youtube-player"
             src={`https://www.youtube.com/embed/${item.id}`}
             title={item.snippet.title}
             className="inset-0 w-full h-[200px] sm:h-[400px]"

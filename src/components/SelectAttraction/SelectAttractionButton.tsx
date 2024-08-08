@@ -9,7 +9,7 @@ export const SelectAttractionButton = ({
   ...rest
 }: SelectAttractionButtonProps) => {
   return (
-    <button {...rest} className="btn">
+    <button {...rest} data-cy="select-attraction-button" className="btn">
       Selecionar
     </button>
   );

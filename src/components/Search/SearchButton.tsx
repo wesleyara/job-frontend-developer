@@ -8,7 +8,11 @@ interface SearchButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const SearchButton = ({ icon: Icon, ...rest }: SearchButtonProps) => {
   return (
-    <button {...rest} className="p-3 bg-blue-500 text-white rounded-md">
+    <button
+      {...rest}
+      data-cy="search-button"
+      className="p-3 bg-blue-500 text-white rounded-md"
+    >
       <Icon />
     </button>
   );

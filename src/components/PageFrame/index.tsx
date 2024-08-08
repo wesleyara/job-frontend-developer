@@ -6,12 +6,12 @@ import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
 import { ErrorFrame } from "../ErrorFrame";
+import { Loading } from "../Loading";
 import { PlayVideoModal } from "../PlayVideoModal";
 import { Search } from "../Search";
 import { SelectAttraction } from "../SelectAttraction";
 import { ShowAttraction } from "../ShowAttraction";
 import { ViewYoutube } from "../ViewYoutube";
-import { Loading } from "../Loading";
 
 export const PageFrame = () => {
   const {
@@ -98,10 +98,11 @@ export const PageFrame = () => {
             ) : (
               !!dataYoutubeVideosDetails && (
                 <ViewYoutube.Root>
-                  {dataYoutubeVideosDetails?.map(item => (
+                  {dataYoutubeVideosDetails?.map((item, index) => (
                     <ViewYoutube.Card
                       key={item.id}
                       item={item}
+                      index={index}
                       setModalOpen={setModalOpen}
                       setVideoSelected={setVideoSelected}
                     />

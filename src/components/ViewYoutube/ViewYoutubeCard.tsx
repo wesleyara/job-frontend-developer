@@ -9,12 +9,14 @@ import { GrView } from "react-icons/gr";
 
 interface ViewYoutubeCardProps {
   item: YoutubeDetailsType;
+  index: number;
   setVideoSelected: Dispatch<SetStateAction<YoutubeDetailsType | undefined>>;
   setModalOpen: Dispatch<SetStateAction<boolean>>;
 }
 
 export const ViewYoutubeCard = ({
   item,
+  index,
   setVideoSelected,
   setModalOpen,
 }: ViewYoutubeCardProps) => {
@@ -60,6 +62,7 @@ export const ViewYoutubeCard = ({
 
   return (
     <article
+      data-cy="view-youtube-card"
       key={item.id}
       className="flex flex-col gap-3 p-3 rounded-md border border-gray-300 bg-white w-full items-center"
     >
@@ -68,6 +71,7 @@ export const ViewYoutubeCard = ({
         onMouseEnter={() => handleMouseEnter(item.id)}
         onMouseLeave={() => handleMouseLeave()}
         onClick={() => handleClick(item)}
+        data-cy={`view-youtube-thumb-${index}`}
       >
         <FaPlay
           className={`play-tooltip ${showPlay(item.id) ? "show" : ""}`}

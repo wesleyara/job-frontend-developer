@@ -11,7 +11,10 @@ export const ShowAttractionBadges = ({
   classifications,
 }: ShowAttractionBadgesProps) => {
   return (
-    <span className="flex gap-2 justify-center flex-wrap mt-5 px-2">
+    <span
+      data-cy="show-attraction-badges"
+      className="flex gap-2 justify-center flex-wrap mt-5 px-2"
+    >
       {classificationArray(classifications[0]).map(item => (
         <Badge key={item.name} variant="outline">
           {item.name}

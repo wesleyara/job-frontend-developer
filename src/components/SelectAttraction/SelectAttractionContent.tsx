@@ -9,7 +9,10 @@ export const SelectAttractionContent = ({
   item,
 }: SelectAttractionContentProps) => {
   return (
-    <div className="flex rounded-t-md items-center">
+    <div
+      data-cy="select-attraction-content"
+      className="flex rounded-t-md items-center"
+    >
       <Image
         src={item.images[0].url}
         alt={item.name}
